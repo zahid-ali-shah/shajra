@@ -53,11 +53,6 @@ services:
     image: shajra_production_celeryworker
     command: /start-celeryworker
 
-  celerybeat:
-    <<: *django
-    image: shajra_production_celerybeat
-    command: /start-celerybeat
-
   flower:
     <<: *django
     image: shajra_production_flower

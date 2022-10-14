@@ -77,17 +77,6 @@ services:
     ports: []
     command: /start-celeryworker
 
-  celerybeat:
-    <<: *django
-    image: shajra_local_celerybeat
-    container_name: shajra_local_celerybeat
-    depends_on:
-      - redis
-      - postgres
-      - mailhog
-    ports: []
-    command: /start-celerybeat
-
   flower:
     <<: *django
     image: shajra_local_flower
